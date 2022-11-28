@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "2f7f8f7a-f2c2-4253-a7ba-3229645f30ce",
+		"name": "ePayco - Proof",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7402626"
+	},
+	"item": [
+		{
+			"name": "Laravel - Soap",
+			"item": [
+				{
+					"name": "Registro Cliente - SOAP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <customer xmlns=\"http://www.dataaccess.com/webservicesserver/\">\n      <document>997562405101981</document>\n      <name>Jose Gutierrez</name>\n      <email>josefo727@gmail.com</email>\n      <mobile>3219069839</mobile>\n    </customer>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{soap-url-base}}/api/customer",
+							"host": [
+								"{{soap-url-base}}"
+							],
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registro Transacción - SOAP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <transaction xmlns=\"http://www.dataaccess.com/webservicesserver/\">\n      <document>997562405101981</document>\n      <mobile>3219069839</mobile>\n      <amount>50000</amount>\n    </transaction>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{soap-url-base}}/api/transaction/charge-balance",
+							"host": [
+								"{{soap-url-base}}"
+							],
+							"path": [
+								"api",
+								"transaction",
+								"charge-balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verificar Saldo - SOAP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <check-balance xmlns=\"http://www.dataaccess.com/webservicesserver/\">\n      <document>997562405101981</document>\n      <mobile>3219069839</mobile>\n    </check-balance>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{soap-url-base}}/api/wallet/check-balance",
+							"host": [
+								"{{soap-url-base}}"
+							],
+							"path": [
+								"api",
+								"wallet",
+								"check-balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirmación de Pago - SOAP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <confirm-payment xmlns=\"http://www.dataaccess.com/webservicesserver/\">\n      <document>997562405101981</document>\n      <token>802046</token>\n      <session_id>hrh0Q9TFQKAgnuKnNWhOmj7MJJXHrl22lJQZsUZz</session_id>\n    </confirm-payment>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{soap-url-base}}/api/transaction/confirm-payment",
+							"host": [
+								"{{soap-url-base}}"
+							],
+							"path": [
+								"api",
+								"transaction",
+								"confirm-payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitud de Pago - SOAP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <request-payment xmlns=\"http://www.dataaccess.com/webservicesserver/\">\n      <document>997562405101981</document>\n      <mobile>3219069839</mobile>\n      <amount>15000</amount>\n    </request-payment>\n  </soap:Body>\n</soap:Envelope>\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{soap-url-base}}/api/transaction/request-payment",
+							"host": [
+								"{{soap-url-base}}"
+							],
+							"path": [
+								"api",
+								"transaction",
+								"request-payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Node Bridge",
+			"item": [
+				{
+					"name": "Registro Transacción - REST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"document\": \"997562405101981\",\n    \"mobile\": \"3219069839\",\n    \"amount\": \"999\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bridge-url-base}}/api/transaction/charge-balance",
+							"host": [
+								"{{bridge-url-base}}"
+							],
+							"path": [
+								"api",
+								"transaction",
+								"charge-balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registro Cliente - REST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"document\": \"997562405101981\",\n    \"name\": \"Jose Gutierrez\",\n    \"email\": \"josefo727@gmail.com\",\n    \"mobile\": \"3219069839\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bridge-url-base}}/api/customer",
+							"host": [
+								"{{bridge-url-base}}"
+							],
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verificar Saldo - REST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"document\": \"997562405101981\",\n    \"mobile\": \"3219069839\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bridge-url-base}}/api/wallet/check-balance",
+							"host": [
+								"{{bridge-url-base}}"
+							],
+							"path": [
+								"api",
+								"wallet",
+								"check-balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitud de Pago - REST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"document\": \"997562405101981\",\n    \"mobile\": \"3219069839\",\n    \"amount\": \"32500\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bridge-url-base}}/api/transaction/request-payment",
+							"host": [
+								"{{bridge-url-base}}"
+							],
+							"path": [
+								"api",
+								"transaction",
+								"request-payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirmación de Pago - REST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"document\": \"997562405101981\",\n    \"token\": \"328451\",\n    \"session_id\": \"YKVbchaD1MiWlglYt4rrABBwf76e3yIG6ISFyP8w\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bridge-url-base}}/api/transaction/confirm-payment",
+							"host": [
+								"{{bridge-url-base}}"
+							],
+							"path": [
+								"api",
+								"transaction",
+								"confirm-payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "soap-url-base",
+			"value": "http://localhost:4001",
+			"type": "string"
+		},
+		{
+			"key": "bridge-url-base",
+			"value": "http://localhost:4002",
+			"type": "string"
+		}
+	]
+}

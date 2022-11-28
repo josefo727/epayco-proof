@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4460cf4e-eb67-4612-b702-c3158415986e" name="Changes" comment="" />
+    <list default="true" id="4460cf4e-eb67-4612-b702-c3158415986e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/node-bridge/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-bridge/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-bridge/adapters/soap-server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-bridge/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-bridge/controllers/customer-controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-bridge/controllers/transactions-controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-bridge/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-bridge/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-bridge/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-bridge/utils/build-xml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-bridge/utils/xmlToJson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,15 +30,19 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/soap-server/resources/views/welcome.blade.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/php/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/soap-server/app/Traits/SoapResponse.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/soap-server/config/app.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/soap-server/storage/logs/laravel.log" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/soap-server/app/Http/Requests/StoreCustomerRequest.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/nginx/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/nginx/nginx-1.conf" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/soap-server/.env" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/soap-server/resources/views/layouts/app.blade.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/soap-server/config/app.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/soap-server/app/Services/XmlToArray.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/soap-server/app/Http/Requests/Auth/LoginRequest.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.env" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/soap-server/config/session.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/nginx/Dockerfile" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/nginx/nginx-1.conf" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -159,6 +176,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/projects-php/pmi-otv" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -185,7 +203,7 @@
       <workItem from="1669323989821" duration="7925000" />
       <workItem from="1669336842219" duration="44425000" />
       <workItem from="1669412400029" duration="25085000" />
-      <workItem from="1669527383469" duration="15568000" />
+      <workItem from="1669527383469" duration="20754000" />
     </task>
     <servers />
   </component>
